@@ -8,6 +8,12 @@ import logging
 import traceback
 import os
 
+print(f"=== APP STARTING ===")
+print(f"PORT: {os.getenv('PORT')}")
+print(f"RAILWAY_PUBLIC_DOMAIN: {os.getenv('RAILWAY_PUBLIC_DOMAIN')}")
+print(f"RAILWAY_ENVIRONMENT: {os.getenv('RAILWAY_ENVIRONMENT')}")
+print(f"===================")
+
 from fastapi import FastAPI, HTTPException
 from fastapi.middleware.cors import CORSMiddleware
 
