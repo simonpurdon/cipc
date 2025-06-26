@@ -1,5 +1,6 @@
 # main.py
 
+import datetime
 import re
 import uuid
 import asyncio
@@ -53,6 +54,10 @@ def _map_status_from_src(src: str) -> str:
 @app.get("/")
 async def health_check():
     return {"status": "healthy", "service": "CIPC BizPortal Automation"}
+
+@app.get("/test")
+async def test():
+    return {"message": "Simple test works!", "timestamp": str(datetime.now())}
 
 @app.post("/connect")
 async def connect(req: ConnectRequest):
